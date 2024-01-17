@@ -1,6 +1,6 @@
 :root {
     --font-main: 'Inter', Serif;
-    --font-accent: 'Press Start 2P', Sans-serif;
+    --font-accent: 'Press Start 2P', fantasy;
     --weight-title: 700;
     --weight-text: 400;
     --button-text-color: #fff;

@@ -1,4 +1,30 @@
-:root.theme-light {
+  @media (prefers-color-scheme: dark) {
+    :root.theme-auto {
+        --weight-title: 785;
+        --weight-text: 465;
+        --background-color: #000;
+        --background-gradient-color: #000;
+        --background-gradient-start: #007F0C;
+        --background-gradient-end: #004306;
+        --accent-color: #00CC14;
+        --button-text-color: #00CC14;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root.theme-auto {
+        --weight-title: 700;
+        --weight-text: 400;
+        --background-color: #fff;
+        --background-gradient-color: #d3d3d3;
+        --background-gradient-start: #e7e7e7;
+        --background-gradient-end: #1a1a1a;
+        --accent-color: #000;
+        --button-text-color: #fff;
+    }
+  }
+
+  :root.theme-light {
     --weight-title: 700;
     --weight-text: 400;
     --background-color: #fff;
