@@ -6,6 +6,7 @@
   font-family: 'Inter', serif;
   font-size: 18px;
   font-style: normal;
+  background-color: var(--background-color, #fff);
   background-image: repeating-linear-gradient(90deg, var(--background-gradient-color, #d3d3d3), var(--background-gradient-color, #d3d3d3) 2px, transparent 2px, transparent 4px),
   repeating-linear-gradient(0deg, var(--background-gradient-color, #d3d3d3), var(--background-gradient-color, #d3d3d3) 2px, transparent 2px, transparent 4px),
   linear-gradient(180deg, var(--background-gradient-start, #e7e7e7), var(--background-gradient-end, #1a1a1a));
@@ -152,13 +153,14 @@
   aspect-ratio: 1/1;
 }
 
-@supports (-webkit-text-stroke: 1px #fff) {
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__lable {
     -webkit-text-stroke: 1px var(--background-color, #fff);
+    text-stroke: 1px var(--background-color, #fff);
   }
 }
 
-@supports not (-webkit-text-stroke: 1px #fff) {
+@supports not ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__lable {
     text-shadow: 1px 1px var(--background-color, #fff),
                 -1px -1px var(--background-color, #fff),
@@ -341,6 +343,12 @@ dialog div {
 }
 
 @media(width < 900px) {
+
+  .card__lable {
+    right: 11px;
+    top: 23px;
+  }
+
   .button-save {
     flex-direction: column;
   }
